@@ -1,0 +1,6 @@
+{
+    "npmName" : "@voicify/voicify-sdk-analytics",
+    "supportsES6": true,
+    "withInterfaces": true,
+    "npmVersion": "2.6.1"
+}

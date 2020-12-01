@@ -1,20 +1,43 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This project includes the models and API methods for interacting with the Voicify Analytics API for JavaScript and TypeScript.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+
+You can install the package from npm:
+
+```
+npm i -s @voicify/voicify-sdk-analytics
+```
+
+If you're using TypeScript, all the types are included, so you don't need to install any additional packages.
+
+
+Each service has its own API class, factory, or functional composer to use in order to make requests against it. 
+
+
+Voicify Partners and Customers can also check out the extended documentation and details at https://support.voicify.com
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+There are some steps to autogenerate the TypeScript models from the swagger API models that Voicify outputs.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Generate Models from Swagger
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Sample:
+
+```
+java -jar swagger-codegen-cli.jar generate -i http://analytics.voicify.com/swagger/v1/swagger.json -l typescript-fetch -c ../typescript-options.json -o ../../src/generated
+```
+
+## Build output
+
+Navigate to the generated folder where the package.json is and run:
+
+```
+npm install
+```
+
+then
+
+```
+npm run build
+```

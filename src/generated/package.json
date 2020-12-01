@@ -1,0 +1,29 @@
+{
+  "name": "@voicify/voicify-sdk-analytics",
+  "version": "2.6.1",
+  "description": "API client for the Voicify Analytics API",
+  "author": "Voicify",
+  "repository": {
+    "url": "https://github.com/voicifydevs/voicify-js-analytics-sdk"
+  },
+  "keywords": [
+    "fetch",
+    "typescript",
+    "swagger-client",
+    "@voicify/voicify-sdk-analytics"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts" : {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "portable-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.9",
+    "typescript": "^2.0"
+  }
+}
